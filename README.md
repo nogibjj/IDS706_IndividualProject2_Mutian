@@ -8,6 +8,18 @@
 [![Rustfmt](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/rustfmt.yml/badge.svg)](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/rustfmt.yml)
 
 [![Build binary release](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/release.yml/badge.svg)](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/release.yml)
-## References
 
-* [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
+
+## Overview
+
+
+## Dependencies
+
+## Run
+
+## Result
+
+## Copilot
+
+
+
