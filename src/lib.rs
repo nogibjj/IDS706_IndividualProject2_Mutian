@@ -1,8 +1,8 @@
 extern crate rusqlite;
 
-use rusqlite::{Connection, Result};
 #[allow(deprecated)]
 use rusqlite::NO_PARAMS;
+use rusqlite::{Connection, Result};
 // Create
 #[allow(deprecated)]
 pub fn create_table() -> Result<()> {
@@ -18,7 +18,7 @@ pub fn create_table() -> Result<()> {
     Ok(())
 }
 // Insert
-pub fn insert_item(name:&str, description:&str) -> Result<()> {
+pub fn insert_item(name: &str, description: &str) -> Result<()> {
     let conn = Connection::open("test.db")?;
     conn.execute(
         "INSERT INTO person (name, description) VALUES (?1, ?2)",
@@ -26,25 +26,32 @@ pub fn insert_item(name:&str, description:&str) -> Result<()> {
     )?;
     Ok(())
 }
-// Read 
+// Read
 
-pub fn get_items() -> Result<()>{
+pub fn get_items() -> Result<()> {
     let conn = Connection::open("test.db")?;
     let mut stmt = conn.prepare("SELECT id, name, description FROM person")?;
 
     let items = stmt.query_map([], |row| {
-        Ok((row.get::<usize, i32>(0)?, row.get::<usize, String>(1)?, row.get::<usize, String>(2)?))
+        Ok((
+            row.get::<usize, i32>(0)?,
+            row.get::<usize, String>(1)?,
+            row.get::<usize, String>(2)?,
+        ))
     })?;
     for item in items {
-        match item{
-            Ok(item) => println!("id: {:?}, name: {:?}, description: {:?}", item.0, item.1, item.2),
+        match item {
+            Ok(item) => println!(
+                "id: {:?}, name: {:?}, description: {:?}",
+                item.0, item.1, item.2
+            ),
             Err(err) => println!("Error: {:?}", err),
         }
     }
     Ok(())
 }
-// Update   
-pub fn update_item(id:i32, name:&str, description:&str) -> Result<()> {
+// Update
+pub fn update_item(id: i32, name: &str, description: &str) -> Result<()> {
     let conn = Connection::open("test.db")?;
     conn.execute(
         "UPDATE person SET name = ?1, description = ?2 WHERE id = ?3",
@@ -54,7 +61,7 @@ pub fn update_item(id:i32, name:&str, description:&str) -> Result<()> {
 }
 
 // Delete
-pub fn delete_item(id:i32) -> Result<()> {
+pub fn delete_item(id: i32) -> Result<()> {
     let conn = Connection::open("test.db")?;
     conn.execute("DELETE FROM person WHERE id = ?1", &[&id])?;
     Ok(())

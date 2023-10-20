@@ -5,7 +5,8 @@ rust-version:
 	rustfmt --version			#rust code formatter
 	rustup --version			#rust toolchain manager
 	clippy-driver --version		#rust linter
-
+build:
+	cargo build
 format:
 	cargo fmt --quiet
 
@@ -21,4 +22,4 @@ run:
 release:
 	cargo build --release
 
-all: format lint test run
+all: build format lint test run

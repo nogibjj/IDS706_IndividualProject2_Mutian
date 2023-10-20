@@ -1,4 +1,4 @@
-name: Clippy
+name: Linting
 
 on: [push, pull_request]
 
@@ -14,7 +14,7 @@ jobs:
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Run clippy
+      - name: Linting
         run: make lint
   
 
