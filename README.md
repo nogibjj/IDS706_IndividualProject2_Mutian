@@ -51,7 +51,7 @@ You can find dependencies in Cargo.toml file
 
 ## Result
 The process is as following: 
-1. Create a table called
+1. Create a table 
 2. Insert 2 data points then read the current table
 3. Update data point 1 and read the current table
 4. Delete data point 1 and then read the current table
