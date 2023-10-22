@@ -12,7 +12,7 @@
 
 ## Overview
 
-This project provides demonstrates CRUD operations on the SQLite database. I use Github Copilot to get those CRUD functions and correct some small mistakes.
+This project demonstrates CRUD operations on the SQLite database. I use Github Copilot to get those CRUD functions and correct some small mistakes.
 
 ### Create Table
 <img width="548" alt="image" src="https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/assets/108935314/eadc1e15-5091-41cb-ad8f-41da2d750edf">
