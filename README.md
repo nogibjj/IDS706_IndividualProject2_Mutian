@@ -72,3 +72,6 @@ We can also try `make all` which is to compile the current package, and then for
 
 Copilot helped me to get those CRUD functions defined in lib.rs.
 
+## Video Link
+https://youtu.be/yMgrSb6OZK4
+
