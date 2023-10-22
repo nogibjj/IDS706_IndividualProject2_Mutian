@@ -1,4 +1,4 @@
-# rust-new-project-template
+# Individual Project 2
 [![Build](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/build.yml/badge.svg)](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/build.yml)
 
 [![Linting](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS706_IndividualProject2_Mutian/actions/workflows/lint.yml)
